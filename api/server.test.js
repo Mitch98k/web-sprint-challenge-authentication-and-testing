@@ -18,8 +18,9 @@ describe('server', () => {
   });
   
   describe('[post] /login', () => {
-    it('responds with a token on successful login', () => {
-        return require(authRouter).post('/login')
+    it('responds with welcome message on successful login', () => {
+        request(authRouter).post('/register').send({ username: 'gary', password: 'password'})
+        return request(authRouter).post('/login').send({ username: 'gary', password: 'password' }).expect('welcome gary');
     })
   });
 });
