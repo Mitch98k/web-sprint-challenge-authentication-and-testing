@@ -1,0 +1,3 @@
+const JWT_SECRET = 'mysecretambitionistoridtheworldofevilandmarketmyownbrandofhaircareproducts'
+
+module.exports = JWT_SECRET
